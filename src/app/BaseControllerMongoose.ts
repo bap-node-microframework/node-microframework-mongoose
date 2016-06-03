@@ -13,9 +13,7 @@ export abstract class BaseControllerMongoose {
     }
 
     cget(res: any, model: any) {
-        let getModel = Container.getModel(model);
-
-        getModel.find().then(
+        Container.getModel(model).find().then(
             (data) => { res.status(200).json(data) },
             (err) => { res.status(404).json({ error: err }); }
         );

@@ -1,3 +1,3 @@
-export * from './paramconverter/paramconverterMongoose.decorators';
-export * from './MongoosePlugin/MongoosePlugin';
-export * from './BaseControllerMongoose/BaseControllerMongoose';
+export * from './app/paramconverterMongoose.decorators';
+export * from './app/MongoosePlugin';
+export * from './app/BaseControllerMongoose';

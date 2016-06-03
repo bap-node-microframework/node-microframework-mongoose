@@ -34,12 +34,12 @@
     "files": [
         "src/index.d.ts",
         "src/index.ts",
-        "src/BaseControllerMongoose/BaseControllerMongoose.d.ts",
-        "src/BaseControllerMongoose/BaseControllerMongoose.ts",
-        "src/MongoosePlugin/MongoosePlugin.d.ts",
-        "src/MongoosePlugin/MongoosePlugin.ts",
-        "src/paramconverter/paramconverterMongoose.decorators.d.ts",
-        "src/paramconverter/paramconverterMongoose.decorators.ts",
+        "src/app/BaseControllerMongoose.d.ts",
+        "src/app/BaseControllerMongoose.ts",
+        "src/app/MongoosePlugin.d.ts",
+        "src/app/MongoosePlugin.ts",
+        "src/app/paramconverterMongoose.decorators.d.ts",
+        "src/app/paramconverterMongoose.decorators.ts",
         "typings/index.d.ts"
     ]
 }

@@ -9,8 +9,7 @@ var BaseControllerMongoose = (function () {
         }
     };
     BaseControllerMongoose.prototype.cget = function (res, model) {
-        var getModel = core_1.Container.getModel(model);
-        getModel.find().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
+        core_1.Container.getModel(model).find().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
     };
     BaseControllerMongoose.prototype.post = function (model, form, request, response) {
         var postModel;

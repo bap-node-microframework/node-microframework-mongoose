@@ -3,8 +3,8 @@ import * as Mongoose from 'mongoose';
 import { Container } from 'bap-node-microframework/core';
 
 export class MongoosePlugin {
-    constructor(dns) {
-        let mongoose = Mongoose.connect(dns);
+    constructor(options) {
+        let mongoose = Mongoose.connect(options.dsn);
         Container.registerService('mongoose', mongoose);
     }
 }
