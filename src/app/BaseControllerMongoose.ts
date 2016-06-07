@@ -1,6 +1,6 @@
-import { Container } from 'bap-node-microframework/core';
+import { Container, BaseController } from 'bap-node-microframework/core';
 
-export abstract class BaseControllerMongoose {
+export abstract class BaseControllerMongoose extends BaseController {
     req: any;
     res: any;
 

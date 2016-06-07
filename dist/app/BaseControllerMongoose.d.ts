@@ -1,4 +1,5 @@
-export declare abstract class BaseControllerMongoose {
+import { BaseController } from 'bap-node-microframework/core';
+export declare abstract class BaseControllerMongoose extends BaseController {
     req: any;
     res: any;
     static router: any;

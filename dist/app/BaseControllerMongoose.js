@@ -1,7 +1,14 @@
 "use strict";
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var core_1 = require('bap-node-microframework/core');
-var BaseControllerMongoose = (function () {
+var BaseControllerMongoose = (function (_super) {
+    __extends(BaseControllerMongoose, _super);
     function BaseControllerMongoose() {
+        _super.apply(this, arguments);
     }
     BaseControllerMongoose.prototype.get = function (res, model) {
         if (typeof model !== "string") {
@@ -48,6 +55,6 @@ var BaseControllerMongoose = (function () {
         object.remove().then(function () { res.status(204).send(); }, function (err) { res.status(500).json({ error: err }); });
     };
     return BaseControllerMongoose;
-}());
+}(core_1.BaseController));
 exports.BaseControllerMongoose = BaseControllerMongoose;
 //# sourceMappingURL=BaseControllerMongoose.js.map
