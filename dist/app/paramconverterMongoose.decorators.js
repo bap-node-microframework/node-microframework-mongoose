@@ -22,7 +22,7 @@ function ParamConverterMongoose() {
                     findOptions[col] = req.params[options.filterBy[col]] || req.query[options.filterBy[col]];
                 });
             }
-            core_1.Container.getModel(options.model).findOne(findOptions).then(function (data) {
+            core_1.Container.getApplicationInstance().getModel(options.model).findOne(findOptions).then(function (data) {
                 if (!data) {
                     return res.status(404).json({
                         error: "Cannot find " + options.model + " with " + JSON.stringify(findOptions)
