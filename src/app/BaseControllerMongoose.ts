@@ -13,7 +13,7 @@ export abstract class BaseControllerMongoose extends BaseController {
     }
 
     cget(res: any, model: any) {
-        Container.getModel(model).find().then(
+        Container.getApplicationInstance().getModel(model).find().then(
             (data) => { res.status(200).json(data) },
             (err) => { res.status(404).json({ error: err }); }
         );
@@ -22,7 +22,7 @@ export abstract class BaseControllerMongoose extends BaseController {
     post(model: any, form: any, request: any, response: any) {
         let postModel;
 
-        let tmp = Container.getModel(model);
+        let tmp = Container.getApplicationInstance().getModel(model);
         postModel = new tmp({});
 
         if (typeof model === "string") {

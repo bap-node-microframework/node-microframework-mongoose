@@ -16,11 +16,11 @@ var BaseControllerMongoose = (function (_super) {
         }
     };
     BaseControllerMongoose.prototype.cget = function (res, model) {
-        core_1.Container.getModel(model).find().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
+        core_1.Container.getApplicationInstance().getModel(model).find().then(function (data) { res.status(200).json(data); }, function (err) { res.status(404).json({ error: err }); });
     };
     BaseControllerMongoose.prototype.post = function (model, form, request, response) {
         var postModel;
-        var tmp = core_1.Container.getModel(model);
+        var tmp = core_1.Container.getApplicationInstance().getModel(model);
         postModel = new tmp({});
         if (typeof model === "string") {
             model = postModel;
