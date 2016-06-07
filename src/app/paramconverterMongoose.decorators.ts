@@ -22,7 +22,7 @@ export function ParamConverterMongoose(...getArgs) {
                 });
             }
 
-            Container.getModel(options.model).findOne(findOptions).then(data => {
+            Container.getApplicationInstance().getModel(options.model).findOne(findOptions).then(data => {
                 if (!data) {
                     return res.status(404).json({
                         error: "Cannot find " + options.model + " with " + JSON.stringify(findOptions)
